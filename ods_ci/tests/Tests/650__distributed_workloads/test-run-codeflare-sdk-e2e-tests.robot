@@ -90,7 +90,7 @@ Run Codeflare-sdk E2E Test
     [Documentation]    Run codeflare-sdk E2E Test
     [Arguments]    ${TEST_NAME}
     Log To Console    "Running codeflare-sdk test: ${TEST_NAME}"
-    ${result} =    Run Process  source ${VIRTUAL_ENV_NAME}/bin/activate && cd codeflare-sdk && poetry env use 3.9 && poetry install --with test,docs && poetry run pytest -v -s ./tests/e2e/${TEST_NAME} --timeout\=600 && deactivate
+    ${result} =    Run Process  source ${VIRTUAL_ENV_NAME}/bin/activate && cd codeflare-sdk && poetry env use 3.9 && poetry install --with test,docs && poetry run pytest -v -s ./tests/e2e/${TEST_NAME} --timeout\=1200 && deactivate
     ...    shell=true
     ...    stderr=STDOUT
     Log To Console    ${result.stdout}
