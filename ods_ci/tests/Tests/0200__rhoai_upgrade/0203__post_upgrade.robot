@@ -155,6 +155,7 @@ Verify Custom Runtime Exists After Upgrade
 Verify Ray Cluster Exists And Monitor Workload Metrics By Submitting Ray Job After Upgrade
     [Documentation]    check the Ray Cluster exists , submit ray job and  verify resource usage after upgrade
     [Tags]    Upgrade
+    ...    DistributedWorkloads
     [Setup]    Prepare Codeflare-SDK Test Setup
     ${PRJ_UPGRADE}    Set Variable    test-ns-rayupgrade
     ${LOCAL_QUEUE}    Set Variable    local-queue-mnist
@@ -191,6 +192,7 @@ Verify Ray Cluster Exists And Monitor Workload Metrics By Submitting Ray Job Aft
 Run Training Operator ODH Run PyTorchJob Test Use Case
     [Documentation]    Run Training Operator ODH Run PyTorchJob Test Use Case
     [Tags]             Upgrade
+    ...    DistributedWorkloads
     [Setup]            Prepare Training Operator E2E Upgrade Test Suite
     Run Training Operator ODH Upgrade Test    TestRunPytorchjob
     [Teardown]         Teardown Training Operator E2E Upgrade Test Suite
@@ -198,6 +200,7 @@ Run Training Operator ODH Run PyTorchJob Test Use Case
 Run Training Operator ODH Run Sleep PyTorchJob Test Use Case
     [Documentation]    Verify that running PyTorchJob Pod wasn't restarted
     [Tags]             Upgrade
+    ...    DistributedWorkloads
     [Setup]            Prepare Training Operator E2E Upgrade Test Suite
     Run Training Operator ODH Upgrade Test    TestVerifySleepPytorchjob
     [Teardown]         Teardown Training Operator E2E Upgrade Test Suite
