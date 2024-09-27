@@ -30,6 +30,7 @@ Run Sanity test
     ...     Kueue
     ...     DistributedWorkloads
     ...     WorkloadsOrchestration
+    ...     TestDwSlackAlert
     Run Kueue sanity Test    Should run with prebuilt workload
 
 

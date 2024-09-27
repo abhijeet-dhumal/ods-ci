@@ -17,6 +17,7 @@ Run TestRayClusterSDKOauth test
     ...     DistributedWorkloads
     ...     WorkloadsOrchestration
     ...     Codeflare-sdk
+    ...     TestDwSlackAlert
     Run Codeflare-SDK Test    e2e    mnist_raycluster_sdk_oauth_test.py
 
 Run TestRayLocalInteractiveOauth test

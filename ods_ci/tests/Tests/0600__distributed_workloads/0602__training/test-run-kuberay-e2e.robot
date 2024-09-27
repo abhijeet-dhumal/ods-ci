@@ -25,6 +25,7 @@ Run TestRayJobWithClusterSelector test
     ...     DistributedWorkloads
     ...     Training
     ...     Kuberay
+    ...     TestDwSlackAlert
     Run Kuberay E2E Test    TestRayJobWithClusterSelector
 
 Run TestRayJobSuspend test

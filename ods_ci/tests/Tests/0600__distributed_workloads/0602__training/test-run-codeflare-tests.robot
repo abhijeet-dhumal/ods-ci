@@ -21,6 +21,7 @@ Run TestKueueRayCpu ODH test
     ...     DistributedWorkloads
     ...     Training
     ...     CodeflareOperator
+    ...     TestDwSlackAlert
     Run Codeflare ODH Test    TestMnistRayCpu    ${RAY_CUDA_IMAGE}
 
 Run TestKueueRayGpu ODH test
