@@ -16,7 +16,6 @@ Run Training operator ODH test base finetuning use case
     ...     DistributedWorkloads
     ...     Training
     ...     TrainingOperator
-    ...     TestDwSlackAlert
     Run Training Operator ODH Core Test    TestPytorchjobWithSFTtrainerFinetuning
 
 Run Training operator ODH test base LoRA use case

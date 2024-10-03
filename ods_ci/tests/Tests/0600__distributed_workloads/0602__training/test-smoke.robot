@@ -13,7 +13,6 @@ Ray smoke test
     ...       DistributedWorkloads
     ...       Training
     ...       ODS-2648
-    ...       TestDwSlackAlert
     Log To Console    Waiting for kuberay-operator to be available
     ${result} =    Run Process    oc wait --for\=condition\=Available --timeout\=60s -n ${APPLICATIONS_NAMESPACE} deployment/kuberay-operator
     ...    shell=true    stderr=STDOUT
@@ -41,7 +40,6 @@ Codeflare smoke test
     ...       DistributedWorkloads
     ...       Training
     ...       ODS-2675
-    ...       TestDwSlackAlert
     Log To Console    Waiting for codeflare-operator-manager to be available
     ${result} =    Run Process    oc wait --for\=condition\=Available --timeout\=60s -n ${APPLICATIONS_NAMESPACE} deployment/codeflare-operator-manager
     ...    shell=true    stderr=STDOUT
@@ -67,7 +65,6 @@ Training operator smoke test
     [Tags]    Smoke
     ...       DistributedWorkloads
     ...       Training
-    ...       TestDwSlackAlert
     Log To Console    Waiting for kubeflow-training-operator to be available
     ${result} =    Run Process    oc wait --for\=condition\=Available --timeout\=300s -n ${APPLICATIONS_NAMESPACE} deployment/kubeflow-training-operator
     ...    shell=true    stderr=STDOUT

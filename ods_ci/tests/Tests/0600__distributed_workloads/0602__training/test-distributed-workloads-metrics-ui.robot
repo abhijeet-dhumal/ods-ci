@@ -45,7 +45,6 @@ Verify Workload Metrics Home page Contents
 Verify Project Metrics Default Page contents
     [Tags]    RHOAIENG-4837
     ...       Sanity    DistributedWorkloads    Training    WorkloadsOrchestration
-    ...       TestDwSlackAlert
     [Documentation]    Verifiy Project Metrics default Page contents
     Open Distributed Workload Metrics Home Page
     Select Distributed Workload Project By Name    ${PRJ_TITLE}
