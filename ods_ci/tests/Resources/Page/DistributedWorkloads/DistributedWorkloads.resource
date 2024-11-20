@@ -151,6 +151,21 @@ Run Training Operator ODH Test
         FAIL    ${TEST_NAME} failed
     END
 
+Run Training Operator KFTO Test
+    [Documentation]    Run Training Operator KFTO Test
+    [Arguments]    ${TEST_NAME}    ${TRAINING_IMAGE}
+    Log To Console    "Running test: ${TEST_NAME}"
+    ${result} =    Run Process    ./${KFTO_CORE_BINARY_NAME} -test.run ${TEST_NAME}
+    ...    shell=true
+    ...    stderr=STDOUT
+    ...    env:CODEFLARE_TEST_OUTPUT_DIR=%{WORKSPACE}/codeflare-${KFTO_CORE_BINARY_NAME}-logs
+    ...    env:CODEFLARE_TEST_TRAINING_IMAGE=${TRAINING_IMAGE}
+    Log To Console    ${result.stdout}
+    Check missing Go test    ${result.stdout}
+    IF    ${result.rc} != 0
+        FAIL    ${TEST_NAME} failed
+    END
+
 Prepare DistributedWorkloads Integration Test Suite
     [Documentation]    Prepare DistributedWorkloads Integration Test Suite
     Log To Console    "Downloading compiled test binary ${ODH_BINARY_NAME}"
