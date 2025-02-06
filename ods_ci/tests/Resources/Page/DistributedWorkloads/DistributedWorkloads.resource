@@ -125,7 +125,7 @@ Prepare Training Operator E2E Test Suite
         FAIL    Unable to retrieve ${test_binary} compiled binary
     END
     Create Directory    %{WORKSPACE}/codeflare-${test_binary}-logs
-    Enable Component    trainingoperator
+    # Enable Component    trainingoperator
     Wait Component Ready    trainingoperator
 
 Prepare Training Operator SDK Test Suite
@@ -149,7 +149,7 @@ Teardown Training Operator E2E Test Suite
     [Arguments]        ${test_binary}
     Log To Console     "Removing test binaries"
     Remove File        ${test_binary}
-    Disable Component    trainingoperator
+    # Disable Component    trainingoperator
 
 Teardown Training Operator SDK Test Suite
     [Documentation]    Teardown Training Operator SDK Test Suite
